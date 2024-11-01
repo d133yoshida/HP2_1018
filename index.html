@@ -1,13 +1,50 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>横並びサンプル</title>
+    <style>
+        .contents {
+            background-color: khaki;
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        .text {
+            max-width: 970px;
+            background-color: darkseagreen;
+            margin: 0 auto;
+            display: grid;
+            color: white;
+            padding: 15px;
+        }
+
+        @media(max-width:767px) {
+            .contents {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>D133</h1>
-    <img src="a.svg" alt="">
+    <div>
+        <div class="contents">
+            <img src="img\a.svg" alt="画像ボックス">
+            <img src="img\b.svg" alt="画像ボックス">
+            <img src="img\c.svg" alt="画像ボックス">
+            <img src="img\d.svg" alt="画像ボックス">
+        </div>
+    </div>
+    <div class="text">D133<br>
+        ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
+        ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
+    </div>
 </body>
+
 </html>
